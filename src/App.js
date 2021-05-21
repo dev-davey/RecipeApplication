@@ -12,6 +12,7 @@ import {
   useParams
 } from 'react-router-dom';
 import Recipe from './components/Recipe'
+import { Button } from 'react-bootstrap';
 
 export default class App extends Component {
   constructor(props) {
@@ -55,17 +56,20 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="container">
           <Route exact path="/" component={App}>
-          <h1>Search A Recipe</h1>
-          <form onSubmit={this.handleSubmit}>
+          <div className="heading">
+            <h1 className="text-center">Welcome To The Recipe App</h1>
+          </div>
+          <form onSubmit={this.handleSubmit} className="form">
             <input
               type="text"
               name="foodType"
               placeholder="Search A Food Type"
               onChange={this.handleInputChange}
+              className="searchBox"
             />
-            <button type="submit">Search</button>
+            <button type="submit" className="btn btn-primary btn-block">Search</button>
           </form>
 
             {this.state.data ? (

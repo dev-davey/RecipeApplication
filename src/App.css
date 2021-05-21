@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+.heading {
+  height: auto;
+  margin-bottom: 1rem;
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1.1px;
+  -webkit-text-stroke-color: black;
+  border-bottom: dashed 5px black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading h1 {
+  font-size: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-block {
+  height: 2.2rem;
+  margin-bottom: 5px;
+  margin-top: 3px;
+  padding-bottom: 7px;
+  width: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.searchBox {
+  width: auto;
+  padding: 3px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.recipeContainer {
+  margin: auto;
+  width: 70vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+.recipeButton {
+  width: 60%;
+}
+
+.recipeHeader {
+  height: auto;
+  margin-bottom: 1rem;
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1.1px;
+  -webkit-text-stroke-color: black;
+  border-bottom: dashed 5px black;
+}
+
+.recipeHeader h1 {
+  font-size: 3rem;
+}
+
+.recipeImg {
+  height: 60vh;
+  width: auto;
+  margin: auto;
+}
+
+.recipeContainer {
+  border: solid 1px black;
+}
+
+.recipeContainer ul {
+  list-style: none;
 }
