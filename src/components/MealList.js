@@ -1,5 +1,6 @@
 import React from 'react'
 import MealCard from './MealCard'
+import Recipe from './Recipe';
 
 
 const MealList = (props)=> {
