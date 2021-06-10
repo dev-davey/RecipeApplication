@@ -55,7 +55,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="container">
           <Route exact path="/" component={App}>
           <div className="heading">
