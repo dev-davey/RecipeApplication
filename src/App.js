@@ -58,31 +58,31 @@ export default class App extends Component {
       <Router basename={process.env.PUBLIC_URL}>
         <div className="container">
           <Route exact path="/" component={App}>
-          <div className="heading">
-            <h1 className="text-center">Welcome To The Recipe App</h1>
-          </div>
-          <form onSubmit={this.handleSubmit} className="form">
-            <input
-              type="text"
-              name="foodType"
-              placeholder="Search A Food Type"
-              onChange={this.handleInputChange}
-              className="searchBox"
-            />
-            <button type="submit" className="btn btn-primary btn-block">Search</button>
-          </form>
+            <div className="heading">
+              <h1 className="text-center">Welcome To The Recipe App</h1>
+            </div>
+            <form onSubmit={this.handleSubmit} className="form">
+              <input
+                type="text"
+                name="foodType"
+                placeholder="Search A Food Type"
+                onChange={this.handleInputChange}
+                className="searchBox"
+              />
+              <button type="submit" className="btn btn-primary btn-block">Search</button>
+            </form>
 
             {this.state.data ? (
               <MealList data={this.state.data} />
             ) : (
-                <div></div>
+              <div></div>
             )}
           </Route>
-            
-            <Route path="/Recipe/:id" component={Recipe} />
-          </div>
-        </Router>        
-    
+
+          <Route path="/Recipe/:id" component={Recipe} />
+        </div>
+      </Router>
+
     );
   }
 }
