@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import YoutubeEmbed from './YoutubeEmbed';
 
 export default class Recipe extends Component {
     constructor(props) {
@@ -61,8 +62,8 @@ export default class Recipe extends Component {
                   <li>{this.state.recipeData[0].strMeasure19} {this.state.recipeData[0].strIngredient19}</li>
                   <li>{this.state.recipeData[0].strMeasure20} {this.state.recipeData[0].strIngredient20}</li>
               </ul>
-              <h5 className="mt-5">Watch Instructional Video Below</h5>
-              <iframe width="560" height="315" src={this.state.recipeData[0].strYoutube} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <h5 className="mt-5">Watch Instructional Video Below</h5>           
+              <YoutubeEmbed embedId={this.state.recipeData[0].strYoutube.slice(this.state.recipeData[0].strYoutube.indexOf('=') + 1,this.state.recipeData[0].strYoutube.length)}/>
               </div>
             ) : (
                 <div></div>
