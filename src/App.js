@@ -6,13 +6,9 @@ import MealList from "./components/MealList";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router, 
-  Switch,
-  Route,
-  Link,
-  useParams
+  Route, 
 } from 'react-router-dom';
 import Recipe from './components/Recipe'
-import { Button } from 'react-bootstrap';
 
 export default class App extends Component {
   constructor(props) {
@@ -34,7 +30,6 @@ export default class App extends Component {
         this.setState({
           data: responseData.meals,
         });
-        console.log(this.state.data);
       })
       .catch((error) => {
         console.log("apiCall did not work", error);
@@ -45,7 +40,6 @@ export default class App extends Component {
     this.setState({
       foodType: e.target.value,
     });
-    console.log(e.target.value);
   };
 
   handleSubmit = (e) => {

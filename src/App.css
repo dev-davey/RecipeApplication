@@ -2,6 +2,24 @@ body {
   background-color: white;
 }
 
+p {
+  color: #000000;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 24px;
+  text-justify: inter-word;
+}
+
+li {
+  color: #000000;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 12px;
+  text-justify: inter-word;
+}
+
 .heading {
   height: auto;
   margin-bottom: 1rem;
@@ -60,7 +78,7 @@ body {
 }
 
 .recipeImg {
-  height: 60vh;
+  height: 50vh;
   width: auto;
   margin: auto;
 }
@@ -75,9 +93,26 @@ body {
 
 iframe {
   max-width: 100%;
-  margin-bottom: 30px;
 }
 
 img {
   max-width: 100%;
+}
+
+.instructions {
+  width: 80%;
+  margin: auto;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 750px) {
+  .instructions p {
+    font-size: 10px;
+  }
+
+  li {
+    font-size: 12px;
+  }
 }

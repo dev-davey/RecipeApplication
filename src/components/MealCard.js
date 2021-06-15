@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import { Card, CardImg, CardText, CardBody, CardTitle, button  } from 'reactstrap'
 import {Link} from 'react-router-dom'
 
@@ -9,7 +8,6 @@ import {Link} from 'react-router-dom'
 // key
 
 const MealCard = (props)=>{
-    console.log(props.title)
 
  return(
     <div className = "col-sm-4 mt-3 mb-3">
