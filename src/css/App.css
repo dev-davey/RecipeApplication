@@ -23,6 +23,7 @@ li {
 .container-fluids {
   width: 90vw;
   margin: auto;
+  margin-bottom: 5rem;
 }
 
 .heading {
@@ -57,11 +58,6 @@ li {
   opacity: 0.8;
   text-align: center;
   height: 3rem;
-}
-
-.recipeContainer {
-  margin: auto;
-  width: 90vw;
 }
 
 @media screen and (max-width: 900px) {

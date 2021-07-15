@@ -28,20 +28,22 @@ export default class Recipe extends Component {
 
     render() {
         return (
-            <div className="text-center recipeContainer container">
+            <div className="text-center recipeContainer container-fluid">
               <div className="recipeHeader">
                 <h1>The Recipe</h1>
               </div>  
                  {this.state.recipeData ? (
               <div>
-              
+              <div className="recipe-name">
               <h1>{this.state.recipeData[0].strMeal}</h1>
               <img className="mb-4 recipeImg" src={this.state.recipeData[0].strMealThumb}/>
+              </div>
               
               <div className="instructions">
-                <h5>Instructions</h5>              
-                <p>{this.state.recipeData[0].strInstructions}</p>
-              </div>
+                <div className="step-by-step">
+                  <h5>Instructions</h5>              
+                  <p>{this.state.recipeData[0].strInstructions}</p>
+                </div>
               <h5>Ingredients</h5>
               <ul>
                   <li>{this.state.recipeData[0].strMeasure1} {this.state.recipeData[0].strIngredient1}</li>
@@ -65,6 +67,7 @@ export default class Recipe extends Component {
                   <li>{this.state.recipeData[0].strMeasure19} {this.state.recipeData[0].strIngredient19}</li>
                   <li>{this.state.recipeData[0].strMeasure20} {this.state.recipeData[0].strIngredient20}</li>
               </ul>
+              </div>
               <h5 className="mt-5">Watch Instructional Video Below</h5>  
               <YoutubeEmbed embedId={this.state.recipeData[0].strYoutube.slice(this.state.recipeData[0].strYoutube.indexOf('=') + 1,this.state.recipeData[0].strYoutube.length)}/>         
               </div>

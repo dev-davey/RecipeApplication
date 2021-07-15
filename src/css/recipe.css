@@ -1,40 +1,40 @@
 .recipeContainer {
   margin: auto;
-  width: 70vw;
-}
-
-.form {
-  display: inline-block;
-  width: 100%;
-  text-align: right;
-}
-
-.recipeButton {
-  width: 60%;
+  width: 90vw;
 }
 
 .recipeHeader {
-  height: auto;
-  margin-bottom: 1rem;
+  height: 25vh;
+  background-image: url("../images/food-img.jpg");
+  margin-bottom: 0.3rem;
   color: black;
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1.1px;
   -webkit-text-stroke-color: black;
-  border-bottom: dashed 5px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .recipeHeader h1 {
-  font-size: 3rem;
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1.1px;
+  -webkit-text-stroke-color: black;
+}
+
+.recipe-name {
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: black;
 }
 
 .recipeImg {
-  height: 50vh;
+  height: 45vh;
   width: auto;
   margin: auto;
-}
-
-.recipeContainer {
-  border: solid 1px black;
 }
 
 .recipeContainer ul {
@@ -50,16 +50,36 @@ img {
 }
 
 .instructions {
-  width: 80%;
+  width: 50%;
   margin: auto;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
+  border: 2px solid lightgray;
 }
 
-@media screen and (max-width: 750px) {
+.instructions p {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.instructions li {
+  font-size: 12px;
+  margin-right: 2rem;
+}
+
+.step-by-step {
+  margin: 2rem;
+  border-bottom: 5px solid lightgray;
+}
+
+@media screen and (max-width: 850px) {
   .instructions p {
     font-size: 10px;
+  }
+
+  .instructions {
+    width: 70vw;
   }
 
   li {
