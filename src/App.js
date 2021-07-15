@@ -1,4 +1,4 @@
-import "./App.css";
+import "./css/App.css";
 import React, { Component } from "react";
 // import Form from './components/Form'
 import MealList from "./components/MealList";
@@ -30,6 +30,7 @@ export default class App extends Component {
         this.setState({
           data: responseData.meals,
         });
+        console.log(this.state.data)
       })
       .catch((error) => {
         console.log("apiCall did not work", error);
@@ -50,12 +51,11 @@ export default class App extends Component {
   render() {
     return (
       <Router basename={process.env.PUBLIC_URL}>
-        <div className="container">
+        <div className="container-fluids">
           <Route exact path="/" component={App}>
             <div className="heading">
-              <h1 className="text-center">Welcome To The Recipe App</h1>
-            </div>
-            <form onSubmit={this.handleSubmit} className="form">
+              <h1 className="text-center">The Recipe App</h1>
+              <form onSubmit={this.handleSubmit} className="text-center">
               <input
                 type="text"
                 name="foodType"
@@ -65,7 +65,7 @@ export default class App extends Component {
               />
               <button type="submit" className="btn btn-primary btn-block">Search</button>
             </form>
-
+            </div>
             {this.state.data ? (
               <MealList data={this.state.data} />
             ) : (

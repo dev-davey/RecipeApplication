@@ -1,5 +1,6 @@
 import { Card, CardImg, CardText, CardBody, CardTitle, button  } from 'reactstrap'
 import {Link} from 'react-router-dom'
+import "../css/mealcard.css"
 
 // props needed for meal cards:
 // title
@@ -10,19 +11,18 @@ import {Link} from 'react-router-dom'
 const MealCard = (props)=>{
 
  return(
-    <div className = "col-sm-4 mt-3 mb-3">
-    <Card style={{ width: '100%', textAlign: "center" }}>
-        <CardTitle><h5>{props.title}</h5></CardTitle>
-        <CardBody>
-            <CardImg variant="top" src={props.imageLocation} />
-            <CardText className="mt-2">
+    <div className="col-sm-4 col-6 mt-3 mb-3 col-lg-3 meal-card">
+            <img className="img-fluid w-90 mb-3" variant="top" src={props.imageLocation} />
+            <div className="card-text">
                 <h5>{props.category}</h5>
-            </CardText>
-            <Link to={`/recipe/${props.id}`}>
-                    <button className="btn btn-outline-secondary recipeButton"> Recipe</button>
+                <h5>{props.title}</h5>
+                <p>{props.instructions.slice(0, 300) + ' ' + '...'}</p>
+            </div>
+            <div className="text-center">  
+            <Link to={`/recipe/${props.id}/${props.title}`}>
+                    <button className="btn btn-outline-secondary recipeButton mb-3"> Recipe</button>
             </Link>
-        </CardBody>
-    </Card>
+            </div>  
     </div>
  )
 }

@@ -1,0 +1,24 @@
+.recipeButton {
+  width: 60%;
+}
+
+.meal-card {
+  opacity: 1;
+  background-color: white;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.meal-card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+.meal-card h5 {
+  text-align: center;
+}
+
+.meal-card button {
+  margin: auto;
+}

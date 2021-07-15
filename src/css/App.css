@@ -1,0 +1,71 @@
+body {
+  background-color: white;
+}
+
+p {
+  color: #000000;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 24px;
+  text-justify: inter-word;
+}
+
+li {
+  color: #000000;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 12px;
+  text-justify: inter-word;
+}
+
+.container-fluids {
+  width: 90vw;
+  margin: auto;
+}
+
+.heading {
+  height: 30vh;
+  background-image: url("../images/food-img.jpg");
+  margin-bottom: 0.3rem;
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1.1px;
+  -webkit-text-stroke-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heading h1 {
+  font-size: 3rem;
+}
+
+.btn-block {
+  height: 3rem;
+  margin-bottom: 5px;
+  margin-top: 1px;
+  padding-bottom: 10px;
+  width: auto;
+}
+
+.searchBox {
+  width: 25vw;
+  padding: 3px;
+  opacity: 0.8;
+  text-align: center;
+  height: 3rem;
+}
+
+.recipeContainer {
+  margin: auto;
+  width: 90vw;
+}
+
+@media screen and (max-width: 900px) {
+  .searchBox {
+    width: 50vw;
+  }
+}

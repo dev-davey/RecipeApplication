@@ -13,6 +13,7 @@ const MealList = (props)=> {
         imageLocation={meal.strMealThumb} 
         title={meal.strMeal} 
         category={meal.strArea}
+        instructions={meal.strInstructions}
         />
         )
 

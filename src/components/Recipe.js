@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import YoutubeEmbed from './YoutubeEmbed';
+import "../css/recipe.css"
 
 export default class Recipe extends Component {
     constructor(props) {
