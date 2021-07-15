@@ -1,4 +1,4 @@
-import { Card, CardImg, CardText, CardBody, CardTitle, button  } from 'reactstrap'
+import {  button  } from 'reactstrap'
 import {Link} from 'react-router-dom'
 import "../css/mealcard.css"
 
@@ -12,7 +12,7 @@ const MealCard = (props)=>{
 
  return(
     <div className="col-sm-4 col-6 mt-3 mb-3 col-lg-3 meal-card">
-            <img className="img-fluid w-90 mb-3" variant="top" src={props.imageLocation} />
+            <img className="img-fluid w-90 mb-3" variant="top" src={props.imageLocation} alt="Recipe" />
             <div className="card-text">
                 <h5>{props.category}</h5>
                 <h5>{props.title}</h5>

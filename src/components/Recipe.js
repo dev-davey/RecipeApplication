@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import YoutubeEmbed from './YoutubeEmbed';
 import "../css/recipe.css"
-
+import instagram from '../images/instagram.png'
+import twitter from '../images/twitter.png'
+import tumbler from '../images/tumbler.png'
+import facebook from '../images/facebook.png'
+import pinterest from '../images/pinterest.png'
 export default class Recipe extends Component {
     constructor(props) {
         super(props);
@@ -36,7 +40,7 @@ export default class Recipe extends Component {
               <div>
               <div className="recipe-name">
               <h1>{this.state.recipeData[0].strMeal}</h1>
-              <img className="mb-4 recipeImg" src={this.state.recipeData[0].strMealThumb}/>
+              <img className="mb-4 recipeImg" src={this.state.recipeData[0].strMealThumb} alt="img"/>
               </div>
               
               <div className="instructions">
@@ -69,8 +73,15 @@ export default class Recipe extends Component {
               </ul>
               </div>
               <h5 className="mt-5">Watch Instructional Video Below</h5>  
-              <YoutubeEmbed embedId={this.state.recipeData[0].strYoutube.slice(this.state.recipeData[0].strYoutube.indexOf('=') + 1,this.state.recipeData[0].strYoutube.length)}/>         
+              <YoutubeEmbed embedId={this.state.recipeData[0].strYoutube.slice(this.state.recipeData[0].strYoutube.indexOf('=') + 1,this.state.recipeData[0].strYoutube.length)}/>
+              <div className="social-container">
+                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=https://dev-davey.github.io/RecipeApplication/"><img src={instagram} alt="instagram"/></a>
+                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=https://dev-davey.github.io/RecipeApplication/"><img src={facebook} alt="facebook"/></a>
+                <a target="_blank" rel="noreferrer" href="https://twitter.com/intent/tweet?url=https://dev-davey.github.io/RecipeApplication/&text="><img src={twitter} alt="twitter" /></a>
+                <a target="_blank" rel="noreferrer" href="https://pinterest.com/pin/create/button/?url=https://dev-davey.github.io/RecipeApplication/&media=&description="><img src={tumbler} alt="tumbler" /></a>
+                <a target="_blank" rel="noreferrer" href="https://pinterest.com/pin/create/button/?url=https://dev-davey.github.io/RecipeApplication/&media=&description="><img src={pinterest} alt="pinterest" /></a>
               </div>
+            </div>
             ) : (
                 <div></div>
             )}

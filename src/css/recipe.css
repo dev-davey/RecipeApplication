@@ -73,6 +73,17 @@ img {
   border-bottom: 5px solid lightgray;
 }
 
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+.social-container img {
+  margin: 1rem;
+  max-height: 40px;
+}
+
 @media screen and (max-width: 850px) {
   .instructions p {
     font-size: 10px;
